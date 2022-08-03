@@ -61,8 +61,8 @@ namespace CaroGame
 
             this.Player = new List<Player>()
             {
-                new Player("Player1", Image.FromFile(Application.StartupPath + "\\Resources\\p1.png")),
-                new Player("Player2", Image.FromFile(Application.StartupPath + "\\Resources\\p2.png"))
+                new Player("Player1", new Bitmap(Properties.Resources.p1)),
+                new Player("Player2", new Bitmap(Properties.Resources.p2))
             };
 
             CurrentPlayer = 0;
