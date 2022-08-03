@@ -56,7 +56,6 @@
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.Controls.Add(this.pctbAvatar);
             this.panel2.Location = new System.Drawing.Point(809, 12);
             this.panel2.Name = "panel2";
@@ -66,7 +65,7 @@
             // pctbAvatar
             // 
             this.pctbAvatar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pctbAvatar.BackColor = System.Drawing.Color.White;
+            this.pctbAvatar.BackColor = System.Drawing.SystemColors.Control;
             this.pctbAvatar.BackgroundImage = global::CaroGame.Properties.Resources.caro;
             this.pctbAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pctbAvatar.Location = new System.Drawing.Point(3, 3);
@@ -95,7 +94,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 150);
+            this.label1.Location = new System.Drawing.Point(38, 150);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(227, 26);
             this.label1.TabIndex = 5;
@@ -120,10 +119,11 @@
             // 
             // pctbMark
             // 
-            this.pctbMark.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pctbMark.BackColor = System.Drawing.SystemColors.Control;
             this.pctbMark.Location = new System.Drawing.Point(179, 3);
             this.pctbMark.Name = "pctbMark";
             this.pctbMark.Size = new System.Drawing.Size(117, 108);
+            this.pctbMark.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbMark.TabIndex = 2;
             this.pctbMark.TabStop = false;
             // 
@@ -147,7 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1120, 673);
+            this.ClientSize = new System.Drawing.Size(1120, 664);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlChessBoard);
