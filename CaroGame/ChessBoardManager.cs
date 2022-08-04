@@ -97,10 +97,6 @@ namespace CaroGame
                 new Player("Player1", new Bitmap(Properties.Resources.p1)),
                 new Player("Player2", new Bitmap(Properties.Resources.p2))
             };
-
-            CurrentPlayer = 0;
-
-            ChangePlayer();
         }
         #endregion
 
@@ -108,6 +104,11 @@ namespace CaroGame
         public void DrawChessBoard()
         {
             Chessboard.Enabled = true;
+            Chessboard.Controls.Clear();
+
+            CurrentPlayer = 0;
+
+            ChangePlayer();
 
             Matrix = new List<List<Button>>();
 
@@ -222,7 +223,7 @@ namespace CaroGame
                     break;
             }
 
-            return countLeft + countRight == 5;
+            return countLeft + countRight >= 5;
         }
 
         //doc
@@ -252,7 +253,7 @@ namespace CaroGame
                     break;
             }
 
-            return countTop + countBottom == 5;
+            return countTop + countBottom >= 5;
         }
 
         //cheo chinh
@@ -288,7 +289,7 @@ namespace CaroGame
                     break;
             }
 
-            return countTop + countBottom == 5;
+            return countTop + countBottom >= 5;
         }
 
         //cheo phu
@@ -324,7 +325,7 @@ namespace CaroGame
                     break;
             }
 
-            return countTop + countBottom == 5;
+            return countTop + countBottom >= 5;
         }
 
         private void Mark(Button btn)

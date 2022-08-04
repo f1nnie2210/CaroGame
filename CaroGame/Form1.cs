@@ -30,14 +30,34 @@ namespace CaroGame
 
             tmCoolDown.Interval = Cons.COOL_DOWN_INTERVAL;
 
-            ChestBoard.DrawChessBoard();
+            NewGame();
         }
 
+
+        #region Methods
         void EndGame()
         {
             tmCoolDown.Stop();
             pnlChessBoard.Enabled = false;
             MessageBox.Show("Game Over!");
+        }
+
+        void NewGame()
+        {
+            prcbCooldown.Value = 0;
+            tmCoolDown.Stop();
+
+            ChestBoard.DrawChessBoard();
+        }
+
+        void Quit()
+        {
+            Application.Exit();
+        }
+
+        void Undo()
+        {
+
         }
 
         private void ChestBoard_PlayerMarked(object sender, EventArgs e)
@@ -60,5 +80,28 @@ namespace CaroGame
                 EndGame();
             }
         }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewGame();
+        }
+
+        private void undoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Undo();
+        }
+
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Quit();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to quit?", "Warning!", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+                e.Cancel = true;
+        }
+
+        #endregion 
     }
 }
