@@ -13,5 +13,9 @@ namespace CaroGame
 
         public static int CHESS_BOARD_WIDTH = 20;
         public static int CHESS_BOARD_HEIGHT = 17;
+
+        public static int COOL_DOWN_STEP = 100;
+        public static int COOL_DOWN_TIME = 10000;
+        public static int COOL_DOWN_INTERVAL = 100;
     }
 }
