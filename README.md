@@ -1,6 +1,6 @@
 # CaroGame
 
-## Group 5
+## Group 3
 
 1. Nguyễn Trần Hoàng Long - 1911548779
 2. Phan Hải Long - 1900008901
